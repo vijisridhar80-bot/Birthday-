@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root{
+--pink:#FFD6E7;
+--lavender:#E6D7FF;
+--purple:#C8A8FF;
+--cream:#FFF9FC;
+--peach:#FFE8D9;
+}
+
+body{
+background:linear-gradient(135deg,var(--pink),var(--lavender));
+min-height:100vh;
+overflow-x:hidden;
+font-family:Poppins,sans-serif;
+transition:.4s;
+}
+
+.dark{
+background:linear-gradient(135deg,#2b1e35,#16101d);
+color:white;
+}
+
+.glass{
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.3);
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.float{
+position:absolute;
+animation:float 8s linear infinite;
+opacity:.5;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-150px);
+}
+}
+
+.hero-img{
+animation:bounce 3s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-10px);
+}
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card{
+transition:.3s;
+}
+
+.navbar{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+}
+
+.gradient-btn{
+background:linear-gradient(45deg,#ff69b4,#c8a8ff);
+}
+
+.profile-ring{
+border:5px solid white;
+box-shadow:0 10px 25px rgba(255,105,180,.3);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Decorations -->
+<div class="float text-4xl left-10">💖</div>
+<div class="float text-4xl left-1/4">⭐</div>
+<div class="float text-4xl left-1/2">☁️</div>
+<div class="float text-4xl left-3/4">🎀</div>
+<div class="float text-4xl right-10">✨</div>
+
+<div class="max-w-md mx-auto p-5 pb-32">
+
+<!-- Top Bar -->
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-bold text-xl">Birthday Dashboard</h2>
+
+<button
+onclick="toggleDark()"
+class="glass px-4 py-2 rounded-full">
+🌙
+</button>
+</div>
+
+<!-- Hero Section -->
+<div class="glass rounded-[32px] p-6 text-center">
+
+<div class="hero-img text-8xl">
+👧🏻🎂
+</div>
+
+<h1 class="text-4xl font-bold text-pink-600 mt-4">
+Happy Birthday ❤️
+</h1>
+
+<p class="mt-3 text-gray-600">
+Today is all about smiles, love and magical memories ✨
+</p>
+
+<button class="gradient-btn text-white px-8 py-4 rounded-full mt-6 font-bold shadow-lg">
+Open Surprise 🎁
+</button>
+
+</div>
+
+<!-- Profile -->
+<div class="glass rounded-[32px] p-5 mt-6">
+
+<div class="flex items-center gap-4">
+
+<img
+src="https://i.pravatar.cc/200"
+class="w-20 h-20 rounded-full profile-ring">
+
+<div>
+<h3 class="font-bold text-xl">My Princess 👑</h3>
+<p class="text-sm opacity-70">
+Birthday Girl
+</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Stats -->
+<div class="grid grid-cols-3 gap-4 mt-6">
+
+<div class="glass card rounded-3xl p-4 text-center">
+<div class="text-3xl">💌</div>
+<p class="font-bold">99+</p>
+</div>
+
+<div class="glass card rounded-3xl p-4 text-center">
+<div class="text-3xl">🎂</div>
+<p class="font-bold">18</p>
+</div>
+
+<div class="glass card rounded-3xl p-4 text-center">
+<div class="text-3xl">🌸</div>
+<p class="font-bold">∞</p>
+</div>
+
+</div>
+
+<!-- Features -->
+<div class="mt-6 space-y-4">
+
+<div class="glass card rounded-[28px] p-5">
+<div class="text-4xl mb-2">📸</div>
+<h3 class="font-bold">Memory Gallery</h3>
+<p>Your cutest memories together.</p>
+</div>
+
+<div class="glass card rounded-[28px] p-5">
+<div class="text-4xl mb-2">💖</div>
+<h3 class="font-bold">Love Notes</h3>
+<p>Special birthday wishes from the heart.</p>
+</div>
+
+<div class="glass card rounded-[28px] p-5">
+<div class="text-4xl mb-2">🎁</div>
+<h3 class="font-bold">Secret Gifts</h3>
+<p>Tap to reveal surprises.</p>
+</div>
+
+</div>
+
+<!-- Birthday Message -->
+<div class="glass rounded-[32px] p-6 mt-6 text-center">
+
+<h2 class="text-2xl font-bold text-pink-600">
+A Message For You 💕
+</h2>
+
+<p class="mt-4 leading-7">
+You are the most beautiful part of my life.
+May your birthday be filled with happiness,
+laughter, love and unforgettable memories.
+Thank you for being you ❤️
+</p>
+
+</div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="navbar glass py-4">
+
+<div class="flex justify-around text-2xl">
+<div>🏠</div>
+<div>📷</div>
+<div>🎁</div>
+<div>💌</div>
+<div>👤</div>
+</div>
+
+</div>
+
+<script>
+
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+document.querySelector(".gradient-btn")
+.addEventListener("click",()=>{
+
+alert(
+"🎉 Happy Birthday! You are loved more than words can express ❤️"
+);
+
+});
+
+</script>
+
+</body>
+</html>
